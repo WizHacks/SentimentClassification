@@ -1,0 +1,100 @@
+Loading dataset from: review_polarity/txt_sentoken
+Loaded: 2000 files
+Cross validating on fold 1
+Creating vocabulary for documents ...
+Returning vocabulary of size 45601...
+BagOfWordsModel with vocabulary of size: 45601
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 45601 for 2000 documents...
+perceptron initialize: bias of 1.00, alpha of 1.000000
+Training perceptron classifer on 1600 documents ...
+[-2.  0.  0. ...,  0.  1. -2.]
+Testing perceptron classifer on 400 documents ...
+tp 113 tn 173 fp 87 fn 27
++precision 0.565000
+-precision 0.865000
++recall 0.807143
+-recall 0.665385
+accuracy 0.715000
+precision 0.715000
+recall 0.736264
+training and testing time: 39.8220000267
+Cross validating on fold 2
+Creating vocabulary for documents ...
+Returning vocabulary of size 46017...
+BagOfWordsModel with vocabulary of size: 46017
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 46017 for 2000 documents...
+perceptron initialize: bias of 1.00, alpha of 1.000000
+Training perceptron classifer on 1600 documents ...
+[ 1.  0.  1. ...,  1.  0.  2.]
+Testing perceptron classifer on 400 documents ...
+tp 62 tn 198 fp 127 fn 13
++precision 0.328042
+-precision 0.938389
++recall 0.826667
+-recall 0.609231
+accuracy 0.650000
+precision 0.633215
+recall 0.717949
+training and testing time: 41.7070000172
+Cross validating on fold 3
+Creating vocabulary for documents ...
+Returning vocabulary of size 45466...
+BagOfWordsModel with vocabulary of size: 45466
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 45466 for 2000 documents...
+perceptron initialize: bias of 1.00, alpha of 1.000000
+Training perceptron classifer on 1600 documents ...
+[ 1. -1. -1. ...,  0.  1. -1.]
+Testing perceptron classifer on 400 documents ...
+tp 107 tn 162 fp 99 fn 32
++precision 0.519417
+-precision 0.835052
++recall 0.769784
+-recall 0.620690
+accuracy 0.672500
+precision 0.677235
+recall 0.695237
+training and testing time: 40.1719999313
+Cross validating on fold 4
+Creating vocabulary for documents ...
+Returning vocabulary of size 45959...
+BagOfWordsModel with vocabulary of size: 45959
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 45959 for 2000 documents...
+perceptron initialize: bias of 1.00, alpha of 1.000000
+Training perceptron classifer on 1600 documents ...
+[ 1. -1. -1. ...,  0.  0. -1.]
+Testing perceptron classifer on 400 documents ...
+tp 169 tn 119 fp 48 fn 64
++precision 0.778802
+-precision 0.650273
++recall 0.725322
+-recall 0.712575
+accuracy 0.720000
+precision 0.714538
+recall 0.718948
+training and testing time: 42.2209999561
+Cross validating on fold 5
+Creating vocabulary for documents ...
+Returning vocabulary of size 45629...
+BagOfWordsModel with vocabulary of size: 45629
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 45629 for 2000 documents...
+perceptron initialize: bias of 1.00, alpha of 1.000000
+Training perceptron classifer on 1600 documents ...
+[ 1. -1. -1. ...,  0.  0. -1.]
+Testing perceptron classifer on 400 documents ...
+tp 140 tn 163 fp 48 fn 49
++precision 0.744681
+-precision 0.768868
++recall 0.740741
+-recall 0.772512
+accuracy 0.757500
+precision 0.756774
+recall 0.756626
+training and testing time: 43.6950001717
+avg accuracy: 0.703
+avg precision: 0.699352381871
+avg recall: 0.725004806405

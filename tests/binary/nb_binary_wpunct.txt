@@ -1,0 +1,125 @@
+Loading dataset from: review_polarity/txt_sentoken
+Loaded: 2000 files
+Cross validating on fold 1
+Creating vocabulary for documents ...
+Returning vocabulary of size 45601...
+BinaryModel with vocabulary of size: 45601
+Creating binary model feature vectors for 2000 documents...
+Returning binary model feature vectors of size 45601 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.5  0.5]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45601L)
+Vocabulary size: 45601
+Total words in class: 264655
+Total words in class: 285432
+Testing naive bayes classifer on 400 documents ...
+tp 162 tn 168 fp 38 fn 32
++precision 0.810000
+-precision 0.840000
++recall 0.835052
+-recall 0.815534
+accuracy 0.825000
+precision 0.825000
+recall 0.825293
+training and testing time: 102.276000023
+Cross validating on fold 2
+Creating vocabulary for documents ...
+Returning vocabulary of size 46017...
+BinaryModel with vocabulary of size: 46017
+Creating binary model feature vectors for 2000 documents...
+Returning binary model feature vectors of size 46017 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.493125  0.506875]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 46017L)
+Vocabulary size: 46017
+Total words in class: 263186
+Total words in class: 291880
+Testing naive bayes classifer on 400 documents ...
+tp 155 tn 184 fp 34 fn 27
++precision 0.820106
+-precision 0.872038
++recall 0.851648
+-recall 0.844037
+accuracy 0.847500
+precision 0.846072
+recall 0.847843
+training and testing time: 109.674999952
+Cross validating on fold 3
+Creating vocabulary for documents ...
+Returning vocabulary of size 45466...
+BinaryModel with vocabulary of size: 45466
+Creating binary model feature vectors for 2000 documents...
+Returning binary model feature vectors of size 45466 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.50375  0.49625]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45466L)
+Vocabulary size: 45466
+Total words in class: 268525
+Total words in class: 283209
+Testing naive bayes classifer on 400 documents ...
+tp 170 tn 164 fp 36 fn 30
++precision 0.825243
+-precision 0.845361
++recall 0.850000
+-recall 0.820000
+accuracy 0.835000
+precision 0.835302
+recall 0.835000
+training and testing time: 109.457000017
+Cross validating on fold 4
+Creating vocabulary for documents ...
+Returning vocabulary of size 45959...
+BinaryModel with vocabulary of size: 45959
+Creating binary model feature vectors for 2000 documents...
+Returning binary model feature vectors of size 45959 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.510625  0.489375]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45959L)
+Vocabulary size: 45959
+Total words in class: 273940
+Total words in class: 282286
+Testing naive bayes classifer on 400 documents ...
+tp 174 tn 162 fp 43 fn 21
++precision 0.801843
+-precision 0.885246
++recall 0.892308
+-recall 0.790244
+accuracy 0.840000
+precision 0.843545
+recall 0.841276
+training and testing time: 116.132999897
+Cross validating on fold 5
+Creating vocabulary for documents ...
+Returning vocabulary of size 45629...
+BinaryModel with vocabulary of size: 45629
+Creating binary model feature vectors for 2000 documents...
+Returning binary model feature vectors of size 45629 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.4925  0.5075]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45629L)
+Vocabulary size: 45629
+Total words in class: 263534
+Total words in class: 291313
+Testing naive bayes classifer on 400 documents ...
+tp 149 tn 171 fp 39 fn 41
++precision 0.792553
+-precision 0.806604
++recall 0.784211
+-recall 0.814286
+accuracy 0.800000
+precision 0.799578
+recall 0.799248
+training and testing time: 103.830000162
+avg accuracy: 0.8295
+avg precision: 0.829899346267
+avg recall: 0.829731841122

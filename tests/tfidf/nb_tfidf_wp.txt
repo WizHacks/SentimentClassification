@@ -1,0 +1,131 @@
+Loading dataset from: review_polarity/txt_sentoken
+Loaded: 2000 files
+Cross validating on fold 1
+Creating vocabulary for documents ...
+Returning vocabulary of size 45601...
+TFIDFModel with vocabulary of size: 45601
+Creating tf-idf model feature vectors for 2000 documents...
+Returning tf-idf model feature vectors of size 45601 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.5  0.5]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45601L)
+Vocabulary size: 45601
+Total words in class: 1278.37800271
+Total words in class: 1295.55691034
+Testing naive bayes classifer on 400 documents ...
+tp 97 tn 197 fp 103 fn 3
++precision 0.485000
+-precision 0.985000
++recall 0.970000
+-recall 0.656667
+accuracy 0.735000
+precision 0.735000
+recall 0.813333
+training and testing time: 327.047999859
+Cross validating on fold 2
+Creating vocabulary for documents ...
+Returning vocabulary of size 46017...
+TFIDFModel with vocabulary of size: 46017
+Creating tf-idf model feature vectors for 2000 documents...
+Returning tf-idf model feature vectors of size 46017 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.493125  0.506875]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 46017L)
+Vocabulary size: 46017
+Total words in class: 1260.13952477
+Total words in class: 1318.08790824
+Testing naive bayes classifer on 400 documents ...
+tp 123 tn 193 fp 66 fn 18
++precision 0.650794
+-precision 0.914692
++recall 0.872340
+-recall 0.745174
+accuracy 0.790000
+precision 0.782743
+recall 0.808757
+training and testing time: 297.072000027
+Cross validating on fold 3
+Creating vocabulary for documents ...
+Returning vocabulary of size 45466...
+TFIDFModel with vocabulary of size: 45466
+Creating tf-idf model feature vectors for 2000 documents...
+Returning tf-idf model feature vectors of size 45466 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.50375  0.49625]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45466L)
+Vocabulary size: 45466
+Total words in class: 1285.17048554
+Total words in class: 1289.10111593
+Testing naive bayes classifer on 400 documents ...
+tp 68 tn 192 fp 138 fn 2
++precision 0.330097
+-precision 0.989691
++recall 0.971429
+-recall 0.581818
+accuracy 0.650000
+precision 0.659894
+recall 0.776623
+training and testing time: 286.93200016
+Cross validating on fold 4
+Creating vocabulary for documents ...
+Returning vocabulary of size 45959...
+TFIDFModel with vocabulary of size: 45959
+Creating tf-idf model feature vectors for 2000 documents...
+Returning tf-idf model feature vectors of size 45959 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.510625  0.489375]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45959L)
+Vocabulary size: 45959
+Total words in class: 1309.90890402
+Total words in class: 1271.53400759
+Testing naive bayes classifer on 400 documents ...
+tp 30 tn 183 fp 187 fn 0
++precision 0.138249
+-precision 1.000000
++recall 1.000000
+-recall 0.494595
+accuracy 0.532500
+precision 0.569124
+recall 0.747297
+training and testing time: 288.737999916
+Cross validating on fold 5
+Creating vocabulary for documents ...
+Returning vocabulary of size 45629...
+TFIDFModel with vocabulary of size: 45629
+Creating tf-idf model feature vectors for 2000 documents...
+Returning tf-idf model feature vectors of size 45629 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.4925  0.5075]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45629L)
+Vocabulary size: 45629
+Total words in class: 1258.40585668
+Total words in class: 1316.53609455
+Testing naive bayes classifer on 400 documents ...
+tp 144 tn 183 fp 44 fn 29
++precision 0.765957
+-precision 0.863208
++recall 0.832370
+-recall 0.806167
+accuracy 0.817500
+precision 0.814582
+recall 0.819269
+training and testing time: 362.516000032
+avg accuracy: 0.705
+avg precision: 0.712268724485
+avg recall: 0.793055952829
+Creating tf-idf model feature vectors for 2 documents...
+Returning tf-idf model feature vectors of size 45629 for 2 documents...
+Predicting on 2 documents ...
+[ 1.  1.]
+[1 1]
+['pos' 'pos']

@@ -1,0 +1,131 @@
+Loading dataset from: review_polarity/txt_sentoken
+Loaded: 2000 files
+Cross validating on fold 1
+Creating vocabulary for documents ...
+Returning vocabulary of size 45601...
+BagOfWordsModel with vocabulary of size: 45601
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 45601 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.5  0.5]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45601L)
+Vocabulary size: 45601
+Total words in class: 559146
+Total words in class: 625927
+Testing naive bayes classifer on 400 documents ...
+tp 157 tn 177 fp 43 fn 23
++precision 0.785000
+-precision 0.885000
++recall 0.872222
+-recall 0.804545
+accuracy 0.835000
+precision 0.835000
+recall 0.838384
+training and testing time: 110.504999876
+Cross validating on fold 2
+Creating vocabulary for documents ...
+Returning vocabulary of size 46017...
+BagOfWordsModel with vocabulary of size: 46017
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 46017 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.493125  0.506875]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 46017L)
+Vocabulary size: 46017
+Total words in class: 557635
+Total words in class: 641721
+Testing naive bayes classifer on 400 documents ...
+tp 143 tn 184 fp 46 fn 27
++precision 0.756614
+-precision 0.872038
++recall 0.841176
+-recall 0.800000
+accuracy 0.817500
+precision 0.814326
+recall 0.820588
+training and testing time: 126.654999971
+Cross validating on fold 3
+Creating vocabulary for documents ...
+Returning vocabulary of size 45466...
+BagOfWordsModel with vocabulary of size: 45466
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 45466 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.50375  0.49625]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45466L)
+Vocabulary size: 45466
+Total words in class: 569193
+Total words in class: 620518
+Testing naive bayes classifer on 400 documents ...
+tp 166 tn 169 fp 40 fn 25
++precision 0.805825
+-precision 0.871134
++recall 0.869110
+-recall 0.808612
+accuracy 0.837500
+precision 0.838480
+recall 0.838861
+training and testing time: 109.210000038
+Cross validating on fold 4
+Creating vocabulary for documents ...
+Returning vocabulary of size 45959...
+BagOfWordsModel with vocabulary of size: 45959
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 45959 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.510625  0.489375]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45959L)
+Vocabulary size: 45959
+Total words in class: 577664
+Total words in class: 621487
+Testing naive bayes classifer on 400 documents ...
+tp 170 tn 168 fp 47 fn 15
++precision 0.783410
+-precision 0.918033
++recall 0.918919
+-recall 0.781395
+accuracy 0.845000
+precision 0.850721
+recall 0.850157
+training and testing time: 100.690999985
+Cross validating on fold 5
+Creating vocabulary for documents ...
+Returning vocabulary of size 45629...
+BagOfWordsModel with vocabulary of size: 45629
+Creating bow model feature vectors for 2000 documents...
+Returning bow model feature vectors of size 45629 for 2000 documents...
+classes ['neg', 'pos']
+priors: [ 0.4925  0.5075]
+naive bayes initialize: training set of size 1600
+Training naive bayes classifer on 1600 documents ...
+shape of likehood (2L, 45629L)
+Vocabulary size: 45629
+Total words in class: 558882
+Total words in class: 638551
+Testing naive bayes classifer on 400 documents ...
+tp 140 tn 179 fp 48 fn 33
++precision 0.744681
+-precision 0.844340
++recall 0.809249
+-recall 0.788546
+accuracy 0.797500
+precision 0.794510
+recall 0.798897
+training and testing time: 101.319999933
+avg accuracy: 0.8265
+avg precision: 0.826607433348
+avg recall: 0.829377561337
+Creating bow model feature vectors for 2 documents...
+Returning bow model feature vectors of size 45629 for 2 documents...
+Predicting on 2 documents ...
+[ 0.  1.]
+[0 1]
+['neg' 'pos']

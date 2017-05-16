@@ -1,0 +1,18 @@
+# Sanity Check
+# txt = ["this movie was horrible", "this movie was terrific"]    
+# vector = binary_model.create_binary_model(txt)
+# predict = classifier.predict(vector)
+# print predict
+# print np.array(data.target_names)[predict]   
+
+# txt = ["this movie was horrible", "this movie was terrific"]    
+# vector = bow_model.create_bow_model(txt)
+# predict = classifier.predict(vector)
+# print predict
+# print np.array(data.target_names)[predict] 
+
+# txt = ["this movie was horrible", "this movie was terrific"]    
+# vector = tfidf_model.create_tfidf_model(np.array(txt))
+# predict = classifier.predict(vector)
+# print predict
+# print np.array(data.target_names)[predict]

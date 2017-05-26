@@ -72,6 +72,25 @@ ap.add_argument("--tfidf",
                 help="Represent feature vector using tfidf model.")
 
 # Classifiers
+ap.add_argument("--perceptron", 
+                action="store_true",
+                default=False,
+                help="Train the data using perceptron classifier.")  
+
+ap.add_argument("--alpha", 
+                action="store",
+                default=1.0,
+                help="Train the data using perceptron classifier with given learning rate. Must be 0< a <=1, otherwise ignored.")
+
+ap.add_argument("--bias", 
+                action="store",
+                default=1,
+                help="Train the data using perceptron classifier with given bias.")
+
+ap.add_argument("--naivebayes", 
+                action="store_true",
+                default=False,
+                help="Train the data using naive bayes classifier.")  
 ap.add_argument("--knn", 
                 action="store_true",
                 default=False,
@@ -184,6 +203,20 @@ if os.path.isdir(args.dataset):
             else:
                 print "euclidian"
                 classifier = Rocchio(data.target_names, distance_metrics.euclidean_scipy)
+
+        # Naive Bayes
+        elif args.naivebayes:
+            data.target = np.array(data.target)
+            classifier = NaiveBayes(data.target_names, data.target[train_index], train_vocabulary)
+
+        # Perceptron 
+        elif args.perceptron:
+            args.alpha = float(args.alpha)
+            if not (args.alpha <= 1.0 and args.alpha > 0.0):
+                args.alpha = 1  
+            weights = np.zeros(train_vocabulary.size)    
+            classifier = Perceptron(weights, bias=args.bias, alpha=args.alpha)
+
         # KNN 
         else:
             try:

@@ -43,3 +43,4 @@ This would run the program with the default perceptron classifier using the bina
 ### To Do:
 - default number of stopwords is 173, which is a bit high and gives lower accuracy 
 - try normalizing binary to see if better accuracy
+- save and load data from csv files

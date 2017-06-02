@@ -214,7 +214,6 @@ if os.path.isdir(args.dataset):
             args.alpha = float(args.alpha)
             if not (args.alpha <= 1.0 and args.alpha > 0.0):
                 args.alpha = 1  
-            weights = np.zeros(train_vocabulary.size)    
             classifier = Perceptron(weights, bias=args.bias, alpha=args.alpha)
 
         # KNN 

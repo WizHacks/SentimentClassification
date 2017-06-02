@@ -1,16 +1,18 @@
 import numpy as np
 
 class Perceptron():
-    '''Perceptron classifier with initial weights, bias, and learning rate alpha'''
-    def __init__(self, weights, bias = 1.0, alpha = 1.0):
-        self.weights = weights
+    '''Perceptron classifier with initial weights, bias, and learning rate'''
+    def __init__(self, bias = 1.0, learning_rate = 1.0):
         self.bias = bias     
-        self.alpha = alpha
-        print "perceptron initialize: bias of %.2f, alpha of %f" %(self.bias, self.alpha)
+        self.learning_rate = learning_rate
+        print "perceptron initialize: bias of %.2f, learning_rate of %f" %(self.bias, self.learning_rate)
 
     def train(self, X, y):
         '''Train the perceptron classifier on training data with correctly labeled classes'''
         print "Training perceptron classifer on %d documents ..." %(X.shape[0])
+        # length of feature vector weights   
+        weights = np.zeros(X.shape[1]) 
+        
         for fvi in range(y.size):               
             d = y[fvi]
             y_hat = self.sgn(np.dot(self.weights, X[fvi]) + self.bias)        
@@ -68,12 +70,12 @@ class Perceptron():
 
     def update_weights(self, d, y_hat, x):
         '''Update the weights given desired output and our output'''
-        self.weights = self.weights + np.dot(self.alpha*(d-y_hat), x)    
+        self.weights = self.weights + np.dot(self.learning_rate*(d-y_hat), x)    
 
     def update_bias(self, d, y_hat, x):
         '''Since bias is not part of the feature vector and weights, it needs
         its own update'''
-        self.bias = self.bias + self.alpha*(d-y_hat)           
+        self.bias = self.bias + self.learning_rate*(d-y_hat)           
 
     def predict(self, X):
         '''Given a new set of test documents, predict their labels'''

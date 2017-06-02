@@ -39,6 +39,7 @@ This would run the program with the default perceptron classifier using the bina
 - [Binary Independence Model](https://en.wikipedia.org/wiki/Binary_Independence_Model)
 - [Perceptron Binary Classifier](https://en.wikipedia.org/wiki/Perceptron)
 - [Naive Bayes Probabilistic Model](https://en.wikipedia.org/wiki/Naive_Bayes_classifier)
+- [Log Likelihood for Logistic Regression](http://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch12.pdf)
 
 ### To Do:
 - default number of stopwords is 173, which is a bit high and gives lower accuracy 

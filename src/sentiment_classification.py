@@ -35,6 +35,7 @@ from sys import exit
 from process_data import BinaryModel, BagOfWordsModel, TFIDFModel
 from knn import KNN
 from rocchio import Rocchio
+from logistic_regression import LogisticRegression
 
 from argparse import ArgumentParser, ArgumentTypeError
 from sklearn.datasets import load_files
@@ -77,7 +78,7 @@ ap.add_argument("--perceptron",
                 default=False,
                 help="Train the data using perceptron classifier.")  
 
-ap.add_argument("--alpha", 
+ap.add_argument("--learning_rate", 
                 action="store",
                 default=1.0,
                 help="Train the data using perceptron classifier with given learning rate. Must be 0< a <=1, otherwise ignored.")
@@ -116,6 +117,22 @@ ap.add_argument("--rocchio",
                 default=False,
                 help="Train the data using nearest centroid classifier.")  
 
+ap.add_argument("--logistic_regression", 
+                action="store_true",
+                default=False,
+                help="Train the data using logistic regression classifier.") 
+
+ap.add_argument("--intercept", 
+                action="store_true",
+                default=False,
+                help="Use an intercept when using with logisitic regression classifier.")                   
+
+# Other
+ap.add_argument("--epochs", 
+                action="store",
+                default=1,
+                help="Train for specificed number of epochs.")
+
 # Required
 ap.add_argument("dataset",
                 help="The directory of the dataset.")
@@ -145,7 +162,7 @@ if os.path.isdir(args.dataset):
     data.target = np.array(data.target)
 
     # Create the 5 fold cross validation sets
-    folds = 5
+    folds = 5 
     iteration = 1
     results = []
     kf = KFold(n_splits=folds)
@@ -211,11 +228,20 @@ if os.path.isdir(args.dataset):
 
         # Perceptron 
         elif args.perceptron:
-            args.alpha = float(args.alpha)
-            if not (args.alpha <= 1.0 and args.alpha > 0.0):
-                args.alpha = 1  
-            classifier = Perceptron(weights, bias=args.bias, alpha=args.alpha)
+            args.learning_rate = float(args.learning_rate)
+            if not (args.learning_rate <= 1.0 and args.learning_rate > 0.0):
+                args.learning_rate = 1  
+            classifier = Perceptron(weights, bias=args.bias, learning_rate=args.learning_rate)
 
+            # Logistic Regression
+        elif args.logistic_regression:
+            args.learning_rate = float(args.learning_rate)
+            if not (args.learning_rate <= 1.0 and args.learning_rate > 0.0):
+                args.learning_rate = 1  
+            args.epochs = int(args.epochs)
+            if args.epochs < 1:
+                args.epochs = 1  
+            classifier = LogisticRegression(args.learning_rate, args.epochs, args.intercept)
         # KNN 
         else:
             try:

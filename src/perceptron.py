@@ -11,7 +11,7 @@ class Perceptron():
         '''Train the perceptron classifier on training data with correctly labeled classes'''
         print "Training perceptron classifer on %d documents ..." %(X.shape[0])
         # length of feature vector weights   
-        weights = np.zeros(X.shape[1]) 
+        self.weights = np.zeros(X.shape[1]) 
         
         for fvi in range(y.size):               
             d = y[fvi]
@@ -24,9 +24,13 @@ class Perceptron():
         '''Score the perceptron classifier on test data'''
         print "Testing perceptron classifer on %d documents ..." %(X.shape[0])
         tp = fp = tn = fn = 0
-        for fvi in range(X.shape[0]):               
-            d = y[fvi]
-            y_hat = self.sgn(np.dot(self.weights, X[fvi]) + self.bias)
+        predictions = self.predict(X)
+        for prediction in range(predictions.shape[0]):               
+            d = y[prediction]
+            y_hat = predictions[prediction]
+        # for fvi in range(X.shape[0]):               
+        #     d = y[fvi]
+        #     y_hat = self.sgn(np.dot(self.weights, X[fvi]) + self.bias)
             if d == 1:
                 if y_hat == 1:
                     tp+=1
@@ -78,8 +82,11 @@ class Perceptron():
         self.bias = self.bias + self.learning_rate*(d-y_hat)           
 
     def predict(self, X):
-        '''Given a new set of test documents, predict their labels'''
-        print "Predicting on %d documents ..." %(X.shape[0])
-        predictions = [self.sgn(np.dot(self.weights, X[fvi]) + self.bias) for fvi in range(X.shape[0])]
+        # '''Given a new set of test documents, predict their labels'''
+        # print "Predicting on %d documents ..." %(X.shape[0])
+        # predictions = [self.sgn(np.dot(self.weights, X[fvi]) + self.bias) for fvi in range(X.shape[0])]
+        # return np.array(predictions)
+        # same?
+        predictions = self.sgn(np.dot(X, self.weights) + self.bias)
         return np.array(predictions)
         

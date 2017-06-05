@@ -2,7 +2,7 @@ NAME
     sentiment_classification.py - Run the sentiment classification program
 
 SYNOPSIS
-    sentiment_classification.py [--binary|--bagofwords|--tfidf|--nopunct|--nostopwords|--knn|--k|--metric|--rocchio|--p] [dataset]
+    sentiment_classification.py [--epochs|--binary|--bagofwords|--tfidf|--nopunct|--nostopwords|--knn|--k|--metric|--rocchio|--p|--logistic_regression] [dataset]
 
 DESCRIPTION
     Run the sentiment classification program with given preprocessing, vector representation model, classifier, and classifier options on the Movie Review Dataset.
@@ -19,6 +19,8 @@ DESCRIPTION
             file_43.txt file_44.txt ...
 
     Options:
+        --epochs[=INT]
+            how many times to iterate over training data
         --binary 
             use the binary feature vector model
         --bagofwords 
@@ -39,9 +41,11 @@ DESCRIPTION
             use the nearest centroid classifier
         --p[=INT]
             use the p norm for when metric is minkowski. INT must be an integer value
+        --logistic_regression
+            use the logistic regression classifier
 
 
-    If none of the optional arguments are provided, the program will be run with default options of not stripping the punctuation, using a binary feature vector model, KNN classifier with k=1 and the Euclidean distance metric.
+    If none of the optional arguments are provided, the program will be run with default options of not stripping the punctuation, epoch of 1, using a binary feature vector model, KNN classifier with k=1 and the Euclidean distance metric.
 
 AUTHOR
     Wendy Zheng

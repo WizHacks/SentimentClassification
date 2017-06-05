@@ -9,7 +9,7 @@
 This is a program that will go through the stages of preprocessing data, training the
 data using perceptron, naive bayes, knn and rocchio classifiers and testing the models using five-fold cross validation techniques. A preprocessing option to strip punctionuation, and/or stop words can also be specified. The features vectors of the data can be represented in either binary, bag of words, or tf-idf approach. These options can be configured by passing the respective parameters as arguments. 
 
-If none of the optional arguments are provided, the program will be run with default options of not stripping the punctuation, using a binary feature vector model, KNN classifier with k=1 and the Euclidean distance metric.
+If none of the optional arguments are provided, the program will be run with default options of not stripping the punctuation, epoch of 1, using a binary feature vector model, KNN classifier with k=1 and the Euclidean distance metric.
 
 ## The Dataset
 The dataset used in this program is the [v2.0 polarity dataset](https://www.cs.cornell.edu/people/pabo/movie-review-data/) from Cornell. There are two classes in this dataset, positive and negative, each classes has 1000 files for a total of 2000 files. 
@@ -45,3 +45,4 @@ This would run the program with the default perceptron classifier using the bina
 - default number of stopwords is 173, which is a bit high and gives lower accuracy 
 - try normalizing binary to see if better accuracy
 - save and load data from csv files
+- save weights of relevant classifiers (ie lr)

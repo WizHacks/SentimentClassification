@@ -33,6 +33,8 @@ import time
 import distance_metrics
 from sys import exit
 from process_data import BinaryModel, BagOfWordsModel, TFIDFModel
+from perceptron import Perceptron
+from naive_bayes import NaiveBayes
 from knn import KNN
 from rocchio import Rocchio
 from logistic_regression import LogisticRegression
@@ -231,17 +233,14 @@ if os.path.isdir(args.dataset):
             args.learning_rate = float(args.learning_rate)
             if not (args.learning_rate <= 1.0 and args.learning_rate > 0.0):
                 args.learning_rate = 1  
-            classifier = Perceptron(weights, bias=args.bias, learning_rate=args.learning_rate)
+            classifier = Perceptron(bias=args.bias, learning_rate=args.learning_rate)
 
             # Logistic Regression
         elif args.logistic_regression:
             args.learning_rate = float(args.learning_rate)
             if not (args.learning_rate <= 1.0 and args.learning_rate > 0.0):
-                args.learning_rate = 1  
-            args.epochs = int(args.epochs)
-            if args.epochs < 1:
-                args.epochs = 1  
-            classifier = LogisticRegression(args.learning_rate, args.epochs, args.intercept)
+                args.learning_rate = 1              
+            classifier = LogisticRegression(args.learning_rate, args.intercept)
         # KNN 
         else:
             try:
@@ -262,7 +261,12 @@ if os.path.isdir(args.dataset):
                 exit(1)
         
         # Train the classifer on the training data and test on seperate data
-        classifier.train(data.feature_vectors[train_index], data.target[train_index])
+        args.epochs = int(args.epochs)
+        if args.epochs < 1:
+            args.epochs = 1  
+        for epoch in range(args.epochs):
+            print "Running epoch %d" %(epoch+1)
+            classifier.train(data.feature_vectors[train_index], data.target[train_index])
         results.append(classifier.score(data.feature_vectors[test_index], data.target[test_index]))
         end = time.time()
         print "training and testing time:", end - start

@@ -42,7 +42,7 @@ def get_vocabulary(documents):
     return np.array(vocabulary.keys())
 
 def normalize(x):
-    '''Normalize the data to unit length'''
+    '''Normalize the data to unit length'''    
     # magnitude = euclidean norm
     magnitude = np.linalg.norm(x)
     for fi in range(len(x)):

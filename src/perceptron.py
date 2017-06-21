@@ -68,6 +68,12 @@ class Perceptron():
 
     def sgn(self, v):
         '''sign function'''
+        # print v
+        # v[v >= 0] = 1
+        # v[v < 0 ] = 1
+        # return v this is a single value but in this case we want array
+        # 
+        # for single value sgn(x)
         if v >= 0:
             return 1
         return 0
@@ -83,10 +89,12 @@ class Perceptron():
 
     def predict(self, X):
         # '''Given a new set of test documents, predict their labels'''
-        # print "Predicting on %d documents ..." %(X.shape[0])
-        # predictions = [self.sgn(np.dot(self.weights, X[fvi]) + self.bias) for fvi in range(X.shape[0])]
-        # return np.array(predictions)
-        # same?
-        predictions = self.sgn(np.dot(X, self.weights) + self.bias)
+        print "Predicting on %d documents ..." %(X.shape[0])
+        predictions = [self.sgn(np.dot(self.weights, X[fvi]) + self.bias) for fvi in range(X.shape[0])]
         return np.array(predictions)
+        # same? no sgn works on one dot product at a time
+        # print X.shape
+        # print self.weights.shape
+        # predictions = self.sgn(np.dot(X, self.weights) + self.bias)
+        # return np.array(predictions)
         

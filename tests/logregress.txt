@@ -1,0 +1,7 @@
+Logisitic Regression
+--------------------
+- epoch = 1
+- learning rate = 1
+- 78/75 intercept, 76/77 no intercept: with/wo punct binary
+- 68/69 intercept, 68/65 no intercept: with/wo punct bow
+- 70.35/69.75 intercept, 81.95/82.05 no intercept: with/wo punct tfidf
